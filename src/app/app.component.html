@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Caluculator App</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navdiv">
+        <div class="logo"><a href="#"></a>The Loan Calculator</div>
+        <ul>
+          <li><a href="app.component.html">Home</a></li>
+          <li><a href="about.component.html">About</a></li>
+          <li><a href="contact.component.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Calculate your loans below</h1>
+      <p>Loan Amount $
+        <input onchange="calculateLoan()" type="number" id="loan-amount" min="1" max="999999" value="10000">
+      </p>
+      <p>Interest Rate %
+        <input onchange="calculateLoan()" type="number" id="interest-rate" min="0" max="100" value="10" step=".1">
+      </p>
+      <p>Months to pay
+        <input onchange="calculateLoan()" type="number" id="months-to-pay" min="3" max="96" value="12">
+      </p>
+      <p class="payment" id="payment">Your monthly payment is</p>
+    </div>
+
+    <script src="app.component.js"></script>
+  </body>
+</html>
+<router-outlet />
